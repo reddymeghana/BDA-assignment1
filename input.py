@@ -1,9 +1,16 @@
 import random
-file = open('input1.txt', 'w')
-for x in range(1000000000):
-    n = random.randint(1,100000000)
-    file.write(str(n))
-file.close()
+import sys
+
+number_of_input_entries = int(sys.argv[1])
+max_number = int(sys.argv[2])
+file_name = sys.argv[3]
+
+inputFile = open(file_name, 'w')
+
+for i in range(number_of_input_entries):
+  inputFile.write(str(random.randint(0, max_number))+"\n")
+
+inputFile.close()
     
 
 
